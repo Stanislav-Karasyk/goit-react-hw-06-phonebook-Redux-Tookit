@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { delitContact } from '../../redux/contact/contact-actions';
+import { deleteContact } from '../../redux/contact/contact-actions';
 
-const ContactList = ({ contacts, delitContact }) => {
+const ContactList = ({ contacts, deleteContact }) => {
   const onHandleChange = e => {
-    delitContact(e.target.id);
+    deleteContact(e.target.id);
   };
 
   return (
@@ -24,7 +24,7 @@ const ContactList = ({ contacts, delitContact }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  delitContact: id => dispatch(delitContact(id)),
+  deleteContact: id => dispatch(deleteContact(id)),
 });
 
 const mapStateToProps = state => ({
